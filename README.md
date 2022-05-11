@@ -82,4 +82,4 @@ You will get the maximum 10 label details from uploded video
 <br/>``Instances:``
    <br/>&emsp;``Parents:``
 <br/>``Timestamp: 0``
-<br/>``Successfully deleted.``
+<br/>``Successfully detected.``
