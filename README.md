@@ -66,7 +66,7 @@ To keep the example simple, we are uploading video to S3 bucket so that we can c
 <br />``}``
 ## Clone and Setup
 clone and setup the project in your local
-<br/>create .env file on root level and set your **AWS** credentials
+<br/>create .env file on root level and paste the content of sample-env for setting the **AWS** credentials
 ## Install Dependencies
 npm install
 ## Run
