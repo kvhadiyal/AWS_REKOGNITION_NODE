@@ -69,7 +69,7 @@ awsUtils.runLabelDetectionAndGetResults = async () => {
         const startLabelDetectionRes = await startLabelDetection();
         console.log("Retrieving results:");
         await getLabelDetectionResults(startLabelDetectionRes);
-        console.log("Successfully deleted.");
+        console.log("Successfully detected.");
     } catch (err) {
         console.log("Error", err);
     }
