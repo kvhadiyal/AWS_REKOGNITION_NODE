@@ -72,4 +72,14 @@ npm install
 ## Run
 npm run start
 ## Output
-You will get the label details from uploded video 
+You will get the maximum 10 label details from uploded video 
+<br/>``JobID: 3a7e9b5b0d86e645e17adc2e671ba09fe61718bc7efcf3e94fffc8591b1617de``
+<br/>``Retrieving results:``
+<br/>``Retrieving Label Detection results``
+<br/>``Timestamp: 0``
+<br/>``Label: 'labelName'``
+<br/>``Confidence: 91.5926284790039``
+<br/>``Instances:``
+   <br/>&emsp;``Parents:``
+<br/>``Timestamp: 0``
+<br/>``Successfully detected.``
