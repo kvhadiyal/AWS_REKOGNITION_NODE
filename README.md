@@ -9,7 +9,7 @@ https://docs.aws.amazon.com/rekognition/latest/dg/video-analyzing-with-sqs.html
 
 ## Create S3 Bucket
 To keep the example simple, we are uploading video to S3 bucket so that we can call our video directly from S3 bucket in our node js code. 
-<br />Bucket policy will be below.
+<br />Update Bucket policy as below.
 <br />``{``
     <br />&emsp;``"Version": "2012-10-17",``
     <br />&emsp;``"Statement": [``
