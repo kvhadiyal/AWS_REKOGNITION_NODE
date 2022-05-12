@@ -1,4 +1,4 @@
-# AWS_REKOGNITION_NODE
+# AWS REKOGNITION NODE
 
 ## Objective
 How to use Amazon rekognization video APIs in your code. NodeJS is used as programming language.
