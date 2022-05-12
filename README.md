@@ -64,6 +64,8 @@ To keep the example simple, we are uploading video to S3 bucket so that we can c
         <br />&emsp;&emsp;``}``
     <br />&emsp;``]``
 <br />``}``
+<br />
+<br /> **Note:** Please check above JSON data by online tool such as https://jsoneditoronline.org/ if not proper then you can repair by helping of this tool. 
 ## Clone and Setup
 clone and setup the project in your local
 <br/>create .env file on root level and paste the content of sample-env for setting the **AWS** credentials
