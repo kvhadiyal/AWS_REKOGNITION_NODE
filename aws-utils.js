@@ -1,4 +1,4 @@
-const { RekognitionClient, StartLabelDetectionCommand, GetLabelDetectionCommand } = require("@aws-sdk/client-rekognition");
+const { RekognitionClient, StartLabelDetectionCommand, GetLabelDetectionCommand, DetectLabelsCommand } = require("@aws-sdk/client-rekognition");
 const rekClient = new RekognitionClient({
     region: process.env.AWS_REGION, credentialDefaultProvider: () => ({
         accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -70,6 +70,38 @@ awsUtils.runLabelDetectionAndGetResults = async () => {
         console.log("Retrieving results:");
         await getLabelDetectionResults(startLabelDetectionRes);
         console.log("Successfully detected.");
+    } catch (err) {
+        console.log("Error", err);
+    }
+};
+
+
+awsUtils.detectLabelsForImage = async () => {
+    try {
+        const params = {
+            Image: {
+                S3Object: {
+                    Bucket: "custom-labels-console-us-west-2-c527eab9e0",
+                    Name: "laptop-5569766_1280.jpeg"
+                },
+            },
+        };
+        const response = await rekClient.send(new DetectLabelsCommand(params));
+        console.log(response.Labels);
+        response.Labels.forEach(label => {
+            console.log(`Confidence: ${label.Confidence}`);
+            console.log(`Name: ${label.Name}`);
+            console.log('Instances:');
+            label.Instances.forEach(instance => {
+                console.log(instance);
+            });
+            console.log('Parents:');
+            label.Parents.forEach(name => {
+                console.log(name);
+            });
+            console.log("-------");
+        });
+        return response; // For unit tests.
     } catch (err) {
         console.log("Error", err);
     }
